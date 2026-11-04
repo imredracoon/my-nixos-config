@@ -56,7 +56,7 @@ in
           shadow = { enabled = false },
         },
         animations = { enabled = true },
-        dwindle = { pseudotile = true, preserve_split = true },
+        dwindle = { preserve_split = true },
         misc = {
           disable_hyprland_logo = true,
           disable_splash_rendering = true,
