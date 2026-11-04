@@ -24,6 +24,10 @@ in
     portalPackage = null;
     systemd.enable = false; # la sessione e' gestita da uwsm
 
+    # Hyprland recente preferisce ~/.config/hypr/hyprland.lua se esiste;
+    # qui generiamo hyprland.conf, quindi il formato e' esplicito.
+    configType = "hyprlang";
+
     settings = {
       "$mod" = "SUPER";
 

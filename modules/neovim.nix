@@ -47,6 +47,8 @@ in
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
+    withRuby = false;
+    withPython3 = false;
 
     plugins = with pkgs.vimPlugins; [
       mini-nvim
@@ -64,7 +66,7 @@ in
     # Server LSP e dipendenze, disponibili solo dentro neovim.
     extraPackages = with pkgs; [
       nixd
-      nixfmt-rfc-style
+      nixfmt
       lua-language-server
       bash-language-server
       ripgrep
@@ -72,7 +74,7 @@ in
       gcc
     ];
 
-    extraLuaConfig = builtins.readFile ../nvim/init.lua;
+    initLua = builtins.readFile ../nvim/init.lua;
   };
 
   xdg.configFile."nvim/lua/solitude.lua".text = solitudeLua;
